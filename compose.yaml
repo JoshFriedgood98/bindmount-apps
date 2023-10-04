@@ -10,13 +10,13 @@
 
 services:
   todo-app:
-    build:
-      context: ./app
-    links:
-      - todo-database
-    #volumes: 
-    #  - ./app:/usr/src/app
-    #  - /usr/src/app/node_modules
+    #build:
+    #  context: ./app
+    #links:
+    # - todo-database
+    volumes: 
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - 3001:3001
 
