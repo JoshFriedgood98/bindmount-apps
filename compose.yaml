@@ -10,10 +10,10 @@
 
 services:
   todo-app:
-    #build:
-    #  context: ./app
-    #links:
-    # - todo-database
+    build:
+      context: ./app
+    links:
+     - todo-database
   
     volumes: 
       - ./app:/usr/src/app
